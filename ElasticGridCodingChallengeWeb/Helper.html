@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.7.min.js"></script>
+    <script src="Scripts/Helper.js"></script>
+</head>
+<body>
+    <br />
+    <hr />
+    <br />
+    <div>
+        Comparision String: <input type="text" id="txtComparisionString" value="hang the dj" />        
+    </div>
+    <br/>
+    <div>
+        Starts With: <input type="text" id="txtStartsWith" />
+        <input type="button" value="Submit" onclick="GetStartsWith($('#txtStartsWith').val());" />
+        <span id="spanStartsWith"></span>
+    </div>
+    <br />
+    <div>
+        Ends With: <input type="text" id="txtEndsWith" />
+        <input type="button" value="Submit" onclick="GetEndsWith($('#txtEndsWith').val());" />
+        <span id="spanEndsWith"></span>
+    </div>
+    <br />
+    <hr/>
+    <br />
+    <div>
+        Strip HTML: <input type="text" id="txtHtmlText" />
+        <input type="button" value="Submit" onclick="GetStrippedHtml($('#txtHtmlText').val());" />
+        <span id="spanStrippedHtml"></span>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div id="divInput">
+        <a href="http://google.com" data­window­group="windowOne">google</a>
+        <a href="http://yahoo.com" data­window­group="windowTwo" option="toolbar=yes, scrollbars=yes, resizable=yes, menubar=yes, width=400, height=800">Yahoo</a>
+        <a href="http://Bing.com" data­window­group="windowOne">Bing</a>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <script type="text/javascript">
+        jqAnchor($('#divInput'));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="contactDetails">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/ContactController.js"></script>    
+</head>
+<body>
+    <div ng-controller="ContactController">
+        <form>
+            <label>Name</label>
+            <input type="text" name="name" ng-model="newcontact.name" />
+            <label>Mobile</label>
+            <input type="text" name="mobile" ng-model="newcontact.mobile" />
+            <label>Email</label>
+            <input type="text" name="email" ng-model="newcontact.email" />
+            <br /><br />
+            <input type="hidden" ng-model="newcontact.id" />
+            <input type="button" value="Save" ng-click="saveContact()" />
+        </form>
+        <br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in contacts">
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.mobile }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>
+                        <a href="#" ng-click="edit(contact.id)">edit</a> |
+                        <a href="#" ng-click="delete(contact.id)">delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</body>
+</html>
